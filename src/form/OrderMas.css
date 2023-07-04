@@ -1,0 +1,143 @@
+/* .blocker{
+   height:600px;
+   width: 100%;
+ 
+  text-align: center; 
+ 
+  padding-top: 50px;
+  
+
+}
+.input{
+   width: 200px;
+   height: 20px;
+   border-radius: 10px;
+}
+.butt2{
+     width: 120px;
+     margin-top: 10px;
+     border-radius: 10px;
+     padding: 10px;
+}
+.innerblock{
+   height: 450px;
+   color: white;
+   text-align: center;
+   margin-left: 33%;
+   width: 500px;
+   background-color: black;
+   border-radius: 30px;
+   padding: 10px;
+   box-shadow: 15px 15px 15px 0 rgb(40, 38, 38);
+}
+
+@media only screen and (max-width: 415px) {
+   .innerblock{
+      height: 450px;
+      color: white;
+      text-align: center;
+      margin: 1%;
+      width: 382px;
+      background-color: black;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow:none;
+      margin-right: 20px;
+   }
+
+}
+@media only screen and (max-width: 360px) {
+   .innerblock{
+      height: 450px;
+      color: white;
+      text-align: center;
+      margin: 1%;
+      width: 330px;
+      background-color: black;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow:none;
+      margin-right: 20px;
+   }
+}
+ */
+
+ .blocker{
+   height:600px;
+   width: 100%;
+ 
+  text-align: center; 
+ 
+  padding-top: 50px;
+  
+
+}
+.input{
+   width: 200px;
+   height: 20px;
+   border-radius: 10px;
+}
+.butt2{
+     width: 120px;
+     margin-top: 10px;
+     border-radius: 10px;
+     padding: 10px;
+}
+.innerblock{
+   height: 450px;
+   color: white;
+   text-align: center;
+   margin-left: 33%;
+   width: 500px;
+   background-color: black;
+   border-radius: 30px;
+   padding: 10px;
+   box-shadow: 15px 15px 15px 0 rgb(40, 38, 38);
+}
+.end_butt{
+   margin-top: 40px;
+   width: 100px;
+   padding: 8px;
+   border-radius: 5px;
+   font-weight: 200;
+   font-size: medium;
+   font-family:cursive;
+   font-size: 18px;
+   
+}
+.enter{
+   width: 230px;
+   height: 20px;
+   border-radius: 12%;
+}
+
+@media only screen and (max-width: 415px) {
+   .innerblock{
+      height: 450px;
+      color: white;
+      text-align: center;
+      margin: 1%;
+      width: 382px;
+      background-color: black;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow:none;
+      margin-right: 20px;
+   }
+
+}
+@media only screen and (max-width: 360px) {
+   .innerblock{
+      height: 450px;
+      color: white;
+      text-align: center;
+      margin: 1%;
+      width: 330px;
+      background-color: black;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow:none;
+      margin-right: 20px;
+   }
+}
+

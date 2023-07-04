@@ -1,0 +1,12 @@
+.Footer{
+    margin-top: 80px;
+   text-align: center;
+}
+.foot_img{
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+}
+.footer_cont{
+    font-family: 'Chivo Mono';font-size: 15px;
+}

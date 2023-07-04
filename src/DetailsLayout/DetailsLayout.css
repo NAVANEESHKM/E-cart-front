@@ -1,0 +1,100 @@
+
+.Detailmain{
+    text-align: center;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    background-color:#16191E;
+   margin-top: 40px;
+   padding: 20px;
+   border-radius: 10%;
+   box-shadow: 10px 10px 10px;
+}
+.Detailinner{
+    line-height: 20%;
+    margin-top: 30px;
+    border: 2px solid black;
+    width: 500px;
+    height: 350px;
+    border-radius: 10%;
+    background-color: whitesmoke;
+}
+.img_deta{
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+.head_det{
+    margin-left: 20px;
+    font-family:fantasy;
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 10;
+}
+
+.info_det{
+    margin-left: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+.butt_Det{
+    width: 150px;
+    margin: 20px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10%;
+    color: white;
+    background-color: black;
+}
+.butt_Det:hover{
+    color: black;
+    background-color: white;
+}
+@media only screen and (max-width: 360px) {
+    .Detailmain{
+        text-align: center;
+        width: 300px;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        background-color:#16191E;
+       margin-top: 40px;
+       padding: 20px;
+       border-radius: 10%;
+       box-shadow: 10px 10px 10px;
+    }
+    .Detailinner{
+        line-height: 20%;
+        margin-top: 30px;
+        border: 2px solid black;
+        width: 300px;
+        height: 350px;
+        border-radius: 10%;
+        background-color: whitesmoke;
+    }
+}
+@media only screen and (max-width: 415px) {
+    .Detailmain{
+        text-align: center;
+        width: 300px;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        background-color:#16191E;
+       margin-top: 40px;
+       padding: 20px;
+       border-radius: 10%;
+       box-shadow: 10px 10px 10px;
+    }
+    .Detailinner{
+        line-height: 20%;
+        margin-top: 30px;
+        border: 2px solid black;
+        width: 300px;
+        height: 350px;
+        border-radius: 10%;
+        background-color: whitesmoke;
+    }
+}
