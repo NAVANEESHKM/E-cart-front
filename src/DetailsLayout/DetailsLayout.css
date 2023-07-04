@@ -52,7 +52,22 @@
     color: black;
     background-color: white;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 415px) {
+    .head_det{
+        margin-left: 20px;
+        font-family:fantasy;
+        font-size: 20px;
+        margin-top: 30px;
+        font-weight: 10;
+        overflow: visible;
+    }
+    .info_det{
+        overflow: visible;
+        margin-left: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-weight: 100;
+    }
     .Detailmain{
         text-align: center;
         width: 300px;
@@ -75,7 +90,22 @@
         background-color: whitesmoke;
     }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 360px) {
+    .head_det{
+        margin-left: 20px;
+        font-family:fantasy;
+        font-size: 20px;
+        margin-top: 30px;
+        font-weight: 10;
+        overflow: visible;
+    }
+    .info_det{
+        overflow: visible;
+        margin-left: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+        font-weight: 100;
+    }
     .Detailmain{
         text-align: center;
         width: 300px;

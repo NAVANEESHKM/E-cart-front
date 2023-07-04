@@ -30,7 +30,7 @@ function DetailsLayout(props){
                <div className="Detailmain"> 
                    <img className="img_deta" src={require('./order_pro.jpg')} alt="main"></img>
                    <div className="Detailinner">
-                   <p className="head_det">NAME</p>
+                   <p className="head_det">Name</p>
                     <p className="info_det">{props.attri.name}</p>
                     <p className="head_det">Product</p>
                     <p className="info_det">{props.attri.product}</p>
