@@ -1,38 +1,9 @@
-// import React from "react";
-// import './OrderMas.css';
-// import { Link } from "react-router-dom";
-// function Order_Mas(props){
- 
-//     return(
-//       <div className="blocker">   
-//         <h1>ORDER PLEASE</h1>
-//         <div className="innerblock">                                                             
-//            <form className="form">
-//              <h3>NAME</h3>
-//              <input className="input" type="text"></input>
-//              <h3>PHONE NUMBER</h3>
-//              <input className="input" type="text"></input>
-//              <h3>PRODUCT</h3>
-//              <select className="input">
-//                  <option>PLEASE SELECT</option>
-//                  <option>OIL</option>
-//                  <option>MASALA</option>
-//                  <option>WHEET</option>
-//              </select>
-//              <h3>QUANTITY</h3>
-//              <input className="input" type="text"></input><br/><br/>
-//              <Link to="/thank"><button className="butt2">ORDER</button></Link>
-//            </form>
-//            </div>
-//        </div>
-//     );
-// }
 
-// export default Order_Mas;
 import { useState } from "react";
 
 import React from "react";
 import { Link as DomLink } from "react-router-dom";
+
 import './OrderMas.css';
 import { Link } from "react-router-dom";
 function Order_Mas(props){
@@ -71,6 +42,8 @@ const handleSubmit = (e) => {
       // Handle error
       console.error(error);
     });
+
+    window.location.href = 'https://navaneeshkm.github.io/E-cart-front/'; 
   
 };
     return(
