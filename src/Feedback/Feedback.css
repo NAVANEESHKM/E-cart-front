@@ -31,11 +31,12 @@
 
 @media only screen and (max-width: 360px) {
     .feed_block{
-        margin-right    :50%;
+        margin-left: 50px;
     }
    }
    @media only screen and (max-width: 415px) {
     .feed_block{
-        margin-left: 60px;
+        margin-left: 50px;
     }
    }
+  

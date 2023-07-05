@@ -106,54 +106,8 @@
 .name_Class{
     font-family: 'Bayon';font-size: 22px;
 }
+
 @media only screen and (max-width: 360px) {
-    #prod_img{
-        position: relative;
-        width:300px;
-        height:300px;  
-        border-radius: 20px;
-           
-          
-    }
-    .block_pro{
-        overflow: hidden;
-        position: relative;
-         margin-left: 7px;
-        width: 100%;
-        height:650px;
-        background-color: white;
-       
-    }
-    .inner_block
-{
-    text-align: center;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 550px;
-    background-color: white;
-   margin: 0;
-   width: 340px;
-   box-shadow: 15px 15px 15px 0 rgb(40, 38, 38);
-
-}
-.image_sizer{
-    width:340px;
-    height:300px;   
-    overflow: hidden;
-    position: relative;
-    margin-top: 5px;
-}
-.text{
-    margin-top:40px;
-    width: 100%;
-    position: absolute;
-   text-align: center;
-    color: white;
-}
-
-}
-
-@media only screen and (max-width: 415px) {
     #prod_img{
         position: relative;
         width:350px;
@@ -163,9 +117,9 @@
           
     }
     .block_pro{
-        margin-left: auto;
+        
         position: relative;
-       margin-right: auto;
+       
         right: 180px;
          width: 590px;
        
@@ -174,7 +128,7 @@
     }
     .inner_block
 {
-    left: 160px;
+
     position:absolute;
     text-align: center;
     border-radius: 20px;
@@ -192,6 +146,7 @@
     overflow: hidden;
     position: relative;
     margin-top: 5px;
+    margin-left: 10px;
 }
 .text{
     margin-top:20px;
@@ -219,8 +174,82 @@
 }
 .contentss{
     font-family: 'Amiko';font-size: 14px;
-    padding-left: 15px;
+    padding-left: 23px;
+    padding-right: 5px;
+    width: 330px;
+}
+
+}
+@media only screen and (max-width: 415px) {
+    #prod_img{
+        position: relative;
+        width:350px;
+        height:300px;  
+        border-radius: 20px;
+           left: 10px;
+          
+    }
+    .block_pro{
+        
+        position: relative;
+       
+        right: 180px;
+         width: 590px;
+       
+        background-color: white;
+       
+    }
+    .inner_block
+{
+    left: 105px;
+    position:absolute;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 550px;
+    background-color: white;
+   margin: 0;
+   width: 390px;
+   box-shadow: 15px 15px 15px 0 rgb(40, 38, 38);
+
+}
+.image_sizer{
+    width:390px;
+    height:300px;   
+    overflow: hidden;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.text{
+    margin-top:20px;
+    width: 100%;
+    left: 20px;
+   right: 20px;
+    position: absolute;
+   text-align: center;
+    color: white;
+}
+.overlying{
+   text-align: center;
+    opacity: 0;
+    position: absolute;
+    background-color: black;
+    padding: 0px;
+    width: 390px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+.contentss{
+    font-family: 'Amiko';font-size: 14px;
+    padding-left: 23px;
     padding-right: 5px;
     width: 330px;
 }
 }
+
