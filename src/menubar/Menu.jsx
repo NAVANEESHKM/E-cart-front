@@ -13,7 +13,7 @@ function Menu(props){
     return (
 
         <div className="menu_body">
-            <h3 data-aos="fade-right" className="logo" >SMART MILLS</h3>
+            <h3 data-aos="fade-right" className="logo" >SMART MILLS </h3>
             <Link activeClass="active" to="aboutid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-right" className="menu_ele">ABOUT</p></Link>
             <Link activeClass="active" to="productid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-right" className="menu_ele">PRODUCTS</p></Link>
             <Link activeClass="active" to="reviewid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-left" className="menu_ele">REVIEWS</p></Link>
