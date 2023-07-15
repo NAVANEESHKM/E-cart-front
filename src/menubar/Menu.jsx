@@ -14,12 +14,12 @@ function Menu(props){
 
         <div className="menu_body">
             <h3 data-aos="fade-right" className="logo" >SMART MILLS </h3>
-            <Link activeClass="active" to="aboutid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-right" className="menu_ele">ABOUT</p></Link>
-            <Link activeClass="active" to="productid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-right" className="menu_ele">PRODUCTS</p></Link>
-            <Link activeClass="active" to="reviewid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-left" className="menu_ele">REVIEWS</p></Link>
-            <Link activeClass="active" to="" spy={true} smooth={true} offset={-70} duration={500}> <p data-aos="fade-left" className="menu_ele">AWARDS</p></Link>
-            <Link activeClass="active" to="" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-left" className="menu_ele">LOGIN</p></Link>
-            <DomLink title="view orders" data-aos="fade-left" to="details"> <img data-aos="fade-right" className="menu_ele1" src={require("./images/cart_icon.png")}/></DomLink>
+            <Link  to="aboutid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-right" className="menu_ele">ABOUT</p></Link>
+            <Link  to="productid" spy={true} smooth={true} offset={-30} duration={500}><p data-aos="fade-right" className="menu_ele">PRODUCTS</p></Link>
+            <Link  to="reviewid" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-left" className="menu_ele">REVIEWS</p></Link>
+            <Link  to="" spy={true} smooth={true} offset={-70} duration={500}> <p data-aos="fade-left" className="menu_ele">AWARDS</p></Link>
+            <Link  to="" spy={true} smooth={true} offset={-70} duration={500}><p data-aos="fade-left" className="menu_ele">LOGIN</p></Link>
+            <DomLink title="view orders" data-aos="fade-left" to="/details"> <img data-aos="fade-right" className="menu_ele1" src={require("./images/cart_icon.png")}/></DomLink>
             
         </div>
     );

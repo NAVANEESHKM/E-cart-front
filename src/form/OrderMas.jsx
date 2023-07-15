@@ -35,6 +35,7 @@ const handleSubmit = (e) => {
     .then(response => response.json())
     .then(data => {
       // Handle response from the server
+      window.location.href = 'https://navaneeshkm.github.io/E-cart-front/'; 
       console.log(data);
       console.log("data send");
     })
@@ -43,7 +44,6 @@ const handleSubmit = (e) => {
       console.error(error);
     });
 
-    window.location.href = 'https://navaneeshkm.github.io/E-cart-front/'; 
   
 };
     return(
