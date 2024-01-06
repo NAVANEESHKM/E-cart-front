@@ -4,18 +4,22 @@ import DetailsLayout from "../DetailsLayout/DetailsLayout";
 function OrderDetails(){
     const [Orders,setOrders] = useState([]);
     useEffect(()=>{
-        fetch('https://e-cart-backend-1gs2.onrender.com/api/all')
+        const email=localStorage.getItem("Email")
+        fetch('http://localhost:3000/api/all',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({email})
+        })
             .then(response => response.json())
             .then((jsonData) => {
-            // jsonData is parsed json object received from url
-                setOrders(jsonData);
-                // console.log(Orders);
+                setOrders(jsonData.items);
             })
         .catch((error) => {
-            // handle your errors here
             console.error(error)
         })
-    });
+    },[]);
 
       return(
         <>

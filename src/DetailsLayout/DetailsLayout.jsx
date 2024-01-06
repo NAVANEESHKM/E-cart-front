@@ -3,11 +3,15 @@ import "./DetailsLayout.css";
 import "./pro.jpg"
 
 const destroyer= async (props) => {
-    const id=props.attri._id;
-    console.log(id);
+    const id=props.attri.phone;
+    const email=localStorage.getItem("Email")
   try {
-    const response = await fetch(`https://e-cart-backend-1gs2.onrender.com/api/${id}`, {
-      method: 'DELETE'
+    const response = await fetch(`http://localhost:3000/api/deleteorder`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({phone:id,email:email})
     });
 
     if (response.ok) {

@@ -9,6 +9,7 @@ import Footer from './Footer/Footer';
 import Feedback from './Feedback/Feedback';
 import Helper from './Helper/Helper';
 import OrderDetails from "./OrderDetails/OrderDetails";
+import Login_page from './Login';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -33,7 +34,8 @@ function App() {
     <Router>
       
       <Routes>
-          <Route path="/" element={<div><Menu/> 
+         <Route path="/" element={<Login_page/>}/>
+          <Route path="front" element={<div><Menu/> 
           <div id="aboutid">
           <About/>
             </div>

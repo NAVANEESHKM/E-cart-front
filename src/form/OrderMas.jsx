@@ -15,17 +15,19 @@ const[phone,setphone]=useState('');
 
 const handleSubmit = (e) => {
   e.preventDefault();
-
+  const email=localStorage.getItem("Email")
   // Convert form data to JSON
   const formData = {
+    email,
     name,
     product,
     quantity,
     phone
   };
   
+
   // Send JSON data to the server
-  fetch('https://e-cart-backend-1gs2.onrender.com/api/items', {
+  fetch('http://localhost:3000/api/items', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

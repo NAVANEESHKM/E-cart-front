@@ -18,17 +18,25 @@ function Helper(){
     let[fc1,changefc1]=useState(feed2);
     let[fc2,changefc2]=useState(feed3);
     useEffect(()=>{
-        fetch('https://e-cart-backend-1gs2.onrender.com/api/all/comment')
+        const email=localStorage.getItem("Email")
+        fetch('http://localhost:3000/api/all/comment',{
+        method:'POST',
+        headers:{
+             'Content-Type':'application/json'
+        },
+        body:JSON.stringify({email})
+    }
+        )
             .then(response => response.json())
             .then((jsonData) => {
             // jsonData is parsed json object received from url
-                setOrders1(jsonData);
+                setOrders1(jsonData.comments);
             })
         .catch((error) => {
             // handle your errors here
             console.error(error)
         })
-    });
+    },[]);
      let result=()=>{
          changeval(1);
          document.getElementById("button_app2").style.display="none";

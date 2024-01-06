@@ -19,15 +19,17 @@ function Condition(props){
      }
      function handleSubmit(e) {
       e.preventDefault();
-    
+     const email=localStorage.getItem("Email")
       // Convert form data to JSON
       const formData = {
+        email,
         name,
         comment
       };
       
+
       // Send JSON data to the server
-      fetch('https://e-cart-backend-1gs2.onrender.com/api/comment', {
+      fetch('http://localhost:3000/api/comment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
