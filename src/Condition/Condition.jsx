@@ -29,7 +29,7 @@ function Condition(props){
       
 
       // Send JSON data to the server
-      fetch('http://localhost:3000/api/comment', {
+      fetch('https://e-cart-backend-1gs2.onrender.com/api/comment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -18,7 +18,7 @@ function Login_page(props) {
     const formData = { Email, Password };
     console.log("Frontend", formData);
 
-    fetch('http://localhost:3000/api/usernew', {
+    fetch('https://e-cart-backend-1gs2.onrender.com/api/usernew', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ function Login_page(props) {
     const formData = { Email, Password };
     console.log("Frontend", formData);
 
-    fetch('http://localhost:3000/api/loginuser', {
+    fetch('https://e-cart-backend-1gs2.onrender.com/api/loginuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

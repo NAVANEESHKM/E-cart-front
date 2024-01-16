@@ -19,7 +19,7 @@ function Helper(){
     let[fc2,changefc2]=useState(feed3);
     useEffect(()=>{
         const email=localStorage.getItem("Email")
-        fetch('http://localhost:3000/api/all/comment',{
+        fetch('https://e-cart-backend-1gs2.onrender.com/api/all/comment',{
         method:'POST',
         headers:{
              'Content-Type':'application/json'
@@ -36,7 +36,7 @@ function Helper(){
             // handle your errors here
             console.error(error)
         })
-    },[]);
+    },[Orders1]);
      let result=()=>{
          changeval(1);
          document.getElementById("button_app2").style.display="none";

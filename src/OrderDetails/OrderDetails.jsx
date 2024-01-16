@@ -5,7 +5,7 @@ function OrderDetails(){
     const [Orders,setOrders] = useState([]);
     useEffect(()=>{
         const email=localStorage.getItem("Email")
-        fetch('http://localhost:3000/api/all',{
+        fetch('https://e-cart-backend-1gs2.onrender.com/api/all',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -19,7 +19,7 @@ function OrderDetails(){
         .catch((error) => {
             console.error(error)
         })
-    },[]);
+    },[Orders]);
 
       return(
         <>

@@ -27,7 +27,7 @@ const handleSubmit = (e) => {
   
 
   // Send JSON data to the server
-  fetch('http://localhost:3000/api/items', {
+  fetch('https://e-cart-backend-1gs2.onrender.com/api/items', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -58,15 +58,15 @@ const handleSubmit = (e) => {
              <h3>PRODUCTS</h3>
              <select className="enter" type="text" name="product" value={product} onChange={e => setproduct(e.target.value)} required>
                         <option key="1" value="">-- Select --</option>
-                        <option key="2" value="saab">Peanut Oil</option>
-                        <option key="3" value="fiat">Coconut Oil</option>
-                        <option key="4" value="audi">Avocado Oil</option>
-                        <option key="5" value="garam">Garam Masala</option>
-                        <option key="6" value="garam">Tandoori Masala</option>
-                        <option key="7" value="garam">Chaat Masala</option>
-                        <option key="8" value="garam">Basamathi Rice</option>
-                        <option key="9" value="garam">Bomba Rice</option>
-                        <option key="10" value="garam">Arborio Rice</option>
+                        <option key="2" value="peanut oil">Peanut Oil</option>
+                        <option key="3" value="coconut oil">Coconut Oil</option>
+                        <option key="4" value="avocado oil">Avocado Oil</option>
+                        <option key="5" value="garam masala">Garam Masala</option>
+                        <option key="6" value="tandoori masala">Tandoori Masala</option>
+                        <option key="7" value="chaat masala">Chaat Masala</option>
+                        <option key="8" value="basmathi rice">Basmathi Rice</option>
+                        <option key="9" value="bomba rice">Bomba Rice</option>
+                        <option key="10" value="arborio rice">Arborio Rice</option>
              </select>
              <h3>QUANTITY</h3>
              <input className="enter" type="number" name="quantity" value={quantity} onChange={e => setquantity(e.target.value)} required />
