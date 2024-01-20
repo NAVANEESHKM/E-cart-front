@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+
 import "./Feedback.css";
 import "./Feedback";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 function Feedback(props){
+  
    useEffect(() => {
       AOS.init();
     }, [])

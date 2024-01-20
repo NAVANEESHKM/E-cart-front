@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from "react";
 import Feedback from "../Feedback/Feedback";
 import Condition from "../Condition/Condition";
-
+import { jwtDecode, InvalidTokenError } from 'jwt-decode';
+import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
 import "./Helper.css";
 const feed1={name:"Vijay",comment:"Every thing is fine . We are so happy to hear that the flavor and crunch were up to par with your expectations."};
@@ -17,9 +18,36 @@ function Helper(){
     let[fc,changefc]=useState(feed1);
     let[fc1,changefc1]=useState(feed2);
     let[fc2,changefc2]=useState(feed3);
+    const [mover,setmover]=useState(0)
+    const navigate = useNavigate();
+    const token=localStorage.getItem("Token")
+    function HelpNavigate(){
+        navigate("/");
+      }
+    useEffect(() => {
+        // Function to decode the token and update state
+        const decodeToken = () => {
+          try {
+            const decoded = jwtDecode(token);
+            // Check if the token has expired
+            const isTokenExpired = decoded.exp * 1000 < Date.now();
+      
+            if (isTokenExpired) {
+              console.log('Token has expired');
+              HelpNavigate(); // Call HelpNavigate when the token is expired
+            }
+          } catch (error) {
+            console.error('Error decoding token:', error);
+          // HelpNavigate() // Use navigate within the Router scope
+          }
+        };
+      
+        // Call the decodeToken function when the component mounts
+        decodeToken();
+      },[mover]);
     useEffect(()=>{
         const email=localStorage.getItem("Email")
-        fetch('http://localhost:3000/api/all/comment',{
+        fetch('https://e-cart-backend-1gs2.onrender.com/api/all/comment',{
         method:'POST',
         headers:{
              'Content-Type':'application/json'
@@ -36,7 +64,7 @@ function Helper(){
             // handle your errors here
             console.error(error)
         })
-    },[]);
+    },[Orders1]);
      let result=()=>{
          changeval(1);
          document.getElementById("button_app2").style.display="none";
@@ -106,7 +134,7 @@ function Helper(){
                </div>
               
                <div id='button_app'>
-                    <button  onClick={()=>{result(); cleaner(1);} } id='button_app2'>COMMENT</button>
+                    <button  onClick={()=>{result(); cleaner(1); setmover(1); } } id='button_app2'>COMMENT</button>
                 </div >
                 <Condition fun={cleaner} chance={chance} con={a}  />
         </div>

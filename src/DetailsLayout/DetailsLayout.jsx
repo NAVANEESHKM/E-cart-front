@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import "./DetailsLayout.css";
 import "./pro.jpg"
 
@@ -6,7 +6,7 @@ const destroyer= async (props) => {
     const id=props.attri.phone;
     const email=localStorage.getItem("Email")
   try {
-    const response = await fetch(`http://localhost:3000/api/deleteorder`, {
+    const response = await fetch(`https://e-cart-backend-1gs2.onrender.com/api/deleteorder`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,10 +29,46 @@ const destroyer= async (props) => {
        
 
 function DetailsLayout(props){
-          return(
-            <>
-               <div className="Detailmain"> 
-                   <img className="img_deta" src={require('./order_pro.jpg')} alt="main"></img>
+  const [imageUrl, setImageUrl] = useState(null);
+
+  useEffect(() => {
+    const destroyer = () => {
+      const imageName = props.attri.product; // Replace with the actual image name
+
+      fetch(`https://e-cart-backend-1gs2.onrender.com/api/imageget`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: imageName })
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Error fetching image: ${response.statusText}`);
+          }
+          return response.blob();
+        })
+        .then(imageBlob => {
+          // Create a URL for the image blob
+          const url = URL.createObjectURL(imageBlob);
+          // Set the imageUrl state
+          setImageUrl(url);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          // Error handling
+        });
+    };
+
+    // Call the destroyer function when the component mounts
+    destroyer();
+  }, []); // No dependencies, so the effect runs only once when the component mounts
+
+  return (
+    <>
+      <div className="Detailmain">
+        {/* Apply imageUrl dynamically to the img tag */}
+        <img className="img_deta" src={imageUrl || require('./order_pro.jpg')} alt="main"></img>
                    <div className="Detailinner">
                    <p className="head_det">Name</p>
                     <p className="info_det">{props.attri.name}</p>
