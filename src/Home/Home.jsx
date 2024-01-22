@@ -63,10 +63,14 @@ function Home(){
             </div>
           <div id="productid" className='product_name'><h3>OUR PRODUCTS</h3></div>
 
-          <div  className='block'>
+          <div  className='block_home'>
           <Products   img={img1} />
           <Products  img={img2}/>
           <Products   img={img3}/>
+          <Products   img={img1} />
+          <Products  img={img2}/>
+          
+
          </div>
 
         <Helper/>

@@ -1,0 +1,46 @@
+/* Admin.css */
+
+.admin-login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .admin-title {
+    color: #333;
+  }
+  
+  .admin-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .admin-input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .admin-button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .admin-button:hover {
+    background-color: #2d67a5;
+  }
+  

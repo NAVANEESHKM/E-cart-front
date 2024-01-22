@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import "./index.css"; // Import your CSS file
 
 function Login_page(props) {
@@ -85,7 +85,9 @@ function Login_page(props) {
           />
         </label>
         <button className="login-button" onClick={(e) => handleSubmit(e)}>Signup</button>
-        <button className="login-button" onClick={(e) => handleLogin(e)}>Login</button>
+        <button className="login-button" onClick={(e) => handleLogin(e)}>Login</button><br/><br/>
+        <Link target="_self" to="/admin"> <button>Admin Page</button></Link><br/>
+
       </div>
     </div>
   );

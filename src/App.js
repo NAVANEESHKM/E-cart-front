@@ -13,6 +13,7 @@ import Feedback from './Feedback/Feedback';
 import Helper from './Helper/Helper';
 import OrderDetails from "./OrderDetails/OrderDetails";
 import Login_page from './Login';
+import Admin from "./Admin/Admin"
 import Home from "./Home/Home"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,6 +33,7 @@ function App() {
       
       <Routes>
          <Route path="/" element={<Login_page/>}/>
+         <Route path="/admin" element={<Admin/>}/>
           <Route path="front" element={<Home/>}/>
           <Route path="/About" element={<About/>}/>
           <Route path="/product" element={<Products/>}/>

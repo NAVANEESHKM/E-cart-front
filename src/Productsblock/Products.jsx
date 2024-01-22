@@ -111,7 +111,8 @@ function Products(props){
                               </div>    
                          </div> <br/>
                         <div className="name_Class">{name}</div><br/>
-                        <Link target="_self" to="/Order"> <button  className="butt">ORDER</button></Link><br/>
+                        <Link target="_self" to="/Order"> <button  className="butt">Add To Cart</button></Link><br/>
+                        <Link target="_self" to="/Order"> <button  className="butt">Buy Now</button></Link><br/>
                         <p>{suspense}</p>
                           <button className="butten_pro" onClick={back}><img className="mover" src={left} alt="left"/></button>
                           <button className="butten_pro" onClick={change}><img className="mover" src={right} alt="right"/></button>
