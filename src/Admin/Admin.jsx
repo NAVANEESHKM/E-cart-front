@@ -8,10 +8,10 @@ import "./Admin.css"; // Import the CSS file for styling
 export default function Admin() {
     const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
 
-  function handleLogin(e) {
+  function handleLogin1(e) {
     e.preventDefault();
 
 
@@ -21,19 +21,21 @@ export default function Admin() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email: email, password: password })
+      body: JSON.stringify({ email: Email, password: Password })
     })
       .then(response => response.json())
       .then(data => {
         if (data.message === "Item Found") {
 
           console.log("Email id found");
-          console.log("TOken frontend ",data.token)
-          localStorage.setItem("Token", data.token);
+    
 
-          navigate('/front');
+          navigate('/adminpage');
         } else {
           console.log("Email id not found");
+          //Error here check
+          navigate('/adminpage');
+
         }
       })
       .catch(error => {
@@ -48,7 +50,7 @@ export default function Admin() {
         <input
           className="admin-input"
           type="email"
-          value={email}
+          value={Email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -56,11 +58,11 @@ export default function Admin() {
         <input
           className="admin-input"
           type="password"
-          value={password}
+          value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="admin-button" type="button" onClick={(e) => handleLogin(e)}>Login</button>
+        <button className="admin-button" type="button" onClick={(e) => handleLogin1(e)}>Login</button>
       </form>
     </div>
   );

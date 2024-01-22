@@ -15,6 +15,8 @@ import OrderDetails from "./OrderDetails/OrderDetails";
 import Login_page from './Login';
 import Admin from "./Admin/Admin"
 import Home from "./Home/Home"
+import AdminPage from "./AdminPage/adminpage"
+import AddProductForm from './AddProductForm/Addproductform';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -34,6 +36,8 @@ function App() {
       <Routes>
          <Route path="/" element={<Login_page/>}/>
          <Route path="/admin" element={<Admin/>}/>
+         <Route path="adminpage" element={<AdminPage/>}/>
+         <Route path="addproductform" element={<AddProductForm/>}/>
           <Route path="front" element={<Home/>}/>
           <Route path="/About" element={<About/>}/>
           <Route path="/product" element={<Products/>}/>
