@@ -5,26 +5,23 @@ export default function AddProductForm() {
   const [benefits, setBenefits] = useState("");
   const [unit, setUnit] = useState("kg"); 
   const [price, setPrice] = useState("");
-
+  const [image, setImage] = useState(null); // State to store the selected image file
   const handleSubmit = (e) => {
     e.preventDefault();
   const email=localStorage.getItem("Email")
-  // Convert form data to JSON
-  const formData = {
-    productname,
-    benefits,
-    unit,
-    price
-  };
-  
+  const formData = new FormData();
+  formData.append("productname", productname);
+    formData.append("benefits", benefits);
+    formData.append("unit", unit);
+    formData.append("price", price);
+
+    // Append the image file to FormData
+    formData.append("image", image);
 
   // Send JSON data to the server
   fetch('https://e-cart-backend-1gs2.onrender.com/api/adminproduct', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
+    body: formData
   })
     .then(response => response.json())
     .then(data => {
@@ -40,7 +37,10 @@ export default function AddProductForm() {
   
 
   };
-
+  const handleImageChange = (e) => {
+    // Set the selected image file to the state
+    setImage(e.target.files[0]);
+  };
   return (
     <div className="add-product-form-container">
       <h1>FORM TO ADD PRODUCT</h1>
@@ -76,6 +76,14 @@ export default function AddProductForm() {
             type="number"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
+          />
+        </label>
+        <label>
+          Product Image:
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
           />
         </label>
 
