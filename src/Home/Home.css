@@ -8,3 +8,17 @@
     justify-items: center;
     
   }
+
+  .skeleton-row {
+    margin-left: 32%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .skeleton {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60%; 
+  }

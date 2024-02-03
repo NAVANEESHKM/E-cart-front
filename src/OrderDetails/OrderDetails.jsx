@@ -64,7 +64,7 @@ function OrderDetails() {
         console.error(error)
       })
   }, [Orders]);
-
+ 
 
   return (
     <>
@@ -73,7 +73,7 @@ function OrderDetails() {
       </div>
       {isLoading ? (
         // Show the skeleton when loading
-        <div className="skeleton">
+        <div className="skeleton1">
           <Skeleton width={150} height={600} />
           <Skeleton animation="wave" width={400} height={300} />
           <Skeleton animation="wave" width={400} height={300} />

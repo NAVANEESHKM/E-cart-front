@@ -4,6 +4,7 @@ import { jwtDecode, InvalidTokenError } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import React from "react";
 import { Link as DomLink } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 import './OrderMas.css';
 import { Link } from "react-router-dom";
@@ -11,13 +12,13 @@ import { Link } from "react-router-dom";
 
 function Order_Mas(props){
   const navigate = useNavigate();
-
   const token=localStorage.getItem("Token")
 
 const [name,setName]=useState('');
 const [quantity,setquantity]=useState('');
-const [product,setproduct]=useState('');
+const[product,setproduct]=useState(localStorage.getItem("product"))
 const[phone,setphone]=useState('');
+console.log("product",product)
 function HelpNavigate(){
   navigate("/");
 }
@@ -86,18 +87,15 @@ const handleSubmit = (e) => {
              <h3>NAME</h3>
              <input className="enter" type="text" name="name" value={name} onChange={e => setName(e.target.value)} required />
              <h3>PRODUCTS</h3>
-             <select className="enter" type="text" name="product" value={product} onChange={e => setproduct(e.target.value)} required>
-                        <option key="1" value="">-- Select --</option>
-                        <option key="2" value="peanut oil">Peanut Oil</option>
-                        <option key="3" value="coconut oil">Coconut Oil</option>
-                        <option key="4" value="avocado oil">Avocado Oil</option>
-                        <option key="5" value="garam masala">Garam Masala</option>
-                        <option key="6" value="tandoori masala">Tandoori Masala</option>
-                        <option key="7" value="chaat masala">Chaat Masala</option>
-                        <option key="8" value="basmathi rice">Basmathi Rice</option>
-                        <option key="9" value="bomba rice">Bomba Rice</option>
-                        <option key="10" value="arborio rice">Arborio Rice</option>
-             </select>
+             <input
+  className="enter"
+  type="text"
+  name="product"
+  placeholder={product}
+  value={product}
+  onChange={(e) => setproduct(e.target.value)}
+  required
+/>
              <h3>QUANTITY</h3>
              <input className="enter" type="number" name="quantity" value={quantity} onChange={e => setquantity(e.target.value)} required />
              <h3>PHONE</h3>
