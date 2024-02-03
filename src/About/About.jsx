@@ -12,7 +12,8 @@ function About(){
          <div className="cont">
             <h1>ABOUT</h1>
             <p>
-Driven by High Principled Values, KPR Mill is one of the largest vertically integrated, public limited – listed company with diversified business focus on Oil,Wheet and Masala. KPR has earned a great deal of experience over the last 40 years to produce an indelible mark in the textile landscape.</p>
+
+            Smart Mill stands as a pinnacle of excellence, delivering premium oils, finely milled rice, and artisanal masalas. Our precision-driven oil extraction ensures top-tier quality, meeting both culinary and nutritional demands. Elevate your dining experience with our meticulously milled rice, preserving natural goodness in every grain. </p>
             <button className="readmore">Read More</button>
          </div>
          <div id="about_img" >
